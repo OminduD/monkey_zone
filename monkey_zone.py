@@ -11,12 +11,31 @@ import os
 y = 0
 x = 0
 text = '''
-         __  __                   _                       _____
-        |  \/  |   ___    _ __   | | __   ___   _   _    |__  /   ___    _ __     ___
-        | |\/| |  / _ \  | '_ \  | |/ /  / _ \ | | | |     / /   / _ \  | '_ \   / _ |
-        | |  | | | (_) | | | | | |   <  |  __/ | |_| |    / /_  | (_) | | | | | |  __/
-        |_|  |_|  \___/  |_| |_| |_|\_\  \___|  \__, |   /____|  \___/  |_| |_|  \___|
-                                                |___/'''
+                                                                               
+                          SSSSS       SSSSS                                     
+                         S     &     &     #                                    
+                         S      @   @      #       SS                           
+                         S       $ $       #    S##S                            
+                         S        !        #  #@&S                              
+                         S    &      %@    #&$@S                                
+                         S    # %   $ &    %&                                   
+                         S    &  @ @  &   @&@@@@@@@@@&                          
+                         #    &   S   & &&                                      
+                         S!!!!#       S@ ! @@@@      @                          
+                                     @ %#    S      S                           
+                                   @%@S     $    !&                             
+                                S&$&      &!    $                               
+                               #&#      S%     #                                
+                             S#S       @      %$$$$$%@                          
+                                       !                                        
+                                       @$$$$$$$$$$$$$&     
+                                       
+                                       
+         
+'''                     
+                                                                                
+                                                                                
+                                                                        
 
 
 def monkey_scanner1(target, ports):
@@ -247,7 +266,7 @@ def mainmonkey2():
 
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect(hostname=hostname, username=username, password=password)
+    ssh.connect(hostname, username=username, password=password)
     remote_directory = input("Enter the remote directory: ")
     local_file_path = input("Enter the path to the local file: ")
     
@@ -262,7 +281,7 @@ def monkeycolor_text(text, colors):
     return monkey_text
 #####################################################################################################################################
 
-colors = [Fore.GREEN, Fore.BLUE, Fore.YELLOW, Fore.CYAN]* 200
+colors = [Fore.GREEN, Fore.BLUE, Fore.YELLOW, Fore.CYAN]* 2000
 multicolor_text = monkeycolor_text(text, colors)
 print(multicolor_text)
 #####################################################################################################################################
@@ -365,9 +384,15 @@ while z != 0:
         while choice > 3:
             choice = int(input(Fore.YELLOW+ ">>> Choose Again: "))
         if choice == 1:
-            mainmonkey1()
+            ttt = 0
+            while ttt != 1:
+                mainmonkey1()
+                ttt = (input(Fore.YELLOW+ "Exit(1) and Ender to continue: " ))
         elif choice == 2:
-            mainmonkey2()
+            ttt = 0
+            while ttt != 1:
+                mainmonkey2()
+                ttt = int(input(Fore.YELLOW+ "Exit(1) and Ender to continue: " ))
         
         
     
